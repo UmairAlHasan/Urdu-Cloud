@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakOTT.Com</title>
+    <!-- Include JW Player library -->
+    <script src="https://raw.githack.com/UmairAlHasan/AR7/refs/heads/main/JWPlayer-v8.21.1.js">
+    </script>
+    <!-- Include a custom skin if needed -->
+    <link rel="stylesheet" href="https://raw.githack.com/UmairAlHasan/AR7/refs/heads/main/romi-skin-v1.25.1.css">
+</head>
+
+<body>
+    <!-- Place the player container -->
+    <div id="myPlayer"></div>
+
+    <script>
+        // Set up JW Player configuration
+        var player = jwplayer("myPlayer").setup({
+            width: "100%",
+            aspectratio: "16:9",
+            controls: true,
+            sharing: false,
+            displaytitle: true,
+            displaydescription: true,
+            autostart: true,
+            mute: false,
+            repeat: false,
+            playbackRateControls: true,
+            playbackRates: [0.5, 1, 1.5, 1.75, 2],
+            abouttext: "PakOTT.Com",
+            aboutlink: "https://pakott.blogspot.com",
+            title: "PakOTT.Com",
+            description: "Urdu Cloud Stream",
+            image: "",
+            sources: [{
+                file: "https://firebasestorage.googleapis.com/v0/b/direct-download-link-976ca.appspot.com/o/SPY%20x%20FAMILY%20CODE%20White%201080p.mp4?alt=media&token=5b67f59e-00c5-4a6a-8dd2-79b806876e10",
+                label: "Auto",
+                type: "mp4"
+            }],
+            tracks: [{
+                    file: "romi-thumbnails.vtt",
+                    kind: "thumbnails",
+                },
+                {
+                    file: "https://raw.githubusercontent.com/UmairAlHasan/AR7/refs/heads/main/captions/caption-ar.vtt",
+                    label: "Arabic",
+                    kind: "captions",
+                },
+                {
+                    file: "https://raw.githubusercontent.com/UmairAlHasan/AR7/refs/heads/main/captions/caption-en.vtt",
+                    label: "English",
+                    kind: "captions",
+                    default: true,
+                },
+                {
+                    file: "https://raw.githubusercontent.com/UmairAlHasan/AR7/refs/heads/main/captions/caption-hi.vtt",
+                    label: "Hindi",
+                    kind: "captions"
+                },
+                {
+                    file: "https://raw.githubusercontent.com/UmairAlHasan/AR7/refs/heads/main/captions/caption-ur.vtt",
+                    label: "Urdu",
+                    kind: "captions"
+                }
+            ],
+            advertising: {
+                client: "vast",
+                skipoffset: 5,
+                skiptext: "Skip",
+                skipmessage: "Skip this video in  XX",
+                admessage: "The video ends in XX .",
+                schedule: {
+                    adbreak1: {
+                        offset: "pre",
+                        tag: ""
+                    },
+                    adbreak2: {
+                        offset: "post",
+                        tag: ""
+                    },
+                },
+            },
+            captions: {
+                color: "#FF0000",
+                fontSize: 12,
+                backgroundOpacity: 0,
+                edgeStyle: "raised"
+            },
+            skin: {
+                name: "romi"
+            }
+        });
+    </script>
+</body>
+
+</html>
